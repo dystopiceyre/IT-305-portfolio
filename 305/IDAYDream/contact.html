@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <title>IDAYDream</title>
+</head>
+<body>
+
+<h1>Volunteer Form</h1>
+
+<div>
+    <p>Thank you so much for your interest in ID.A.Y.Dream! Before you can volunteer with us,
+        we just need to get a little bit of personal info. If you have any questions or concerns,
+        feel free to contact us through <a href="https://idaydream.org/contact/">this</a> link.</p>
+</div>
+
+<form id="contact-form">
+    <fieldset class="form-group" id="contact">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" >
+        <span class="err" id="err-fname" class="err">
+            Please enter a first name
+        </span>
+        <label for="lastName">Last name</label>
+        <input type="text" class="form-control" id="lastName" >
+        <span class="err" id="err-lname">
+                    Please enter a last name
+        </span>
+
+        <label for="email">Email address</label>
+        <span class="err" id="err-email" class="err">
+            Please enter a valid email address
+        </span>
+        <input type="text" class="form-control" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$" >
+
+        <label for="phone">Phone number</label>
+        <span class="err" id="err-phone" class="err">
+            Please enter a phone number
+        </span>
+        <input type="text" class="form-control" id="phone" pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$">
+
+    </fieldset>
+
+    <fieldset class="form-group" id="address">
+        <label for="street1">Street address</label>
+        <input type="text" class="form-control" id="street1" >
+
+        <label for="street2">Apt/PO Box#</label>
+        <input type="text" class="form-control" id="street2" >
+
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" >
+
+        <label for="state">State</label>
+        <select class="form-control" id="state">
+            <option value="select">Select</option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AR">AR</option>
+            <option value="AZ">AZ</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="IA">IA</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="MA">MA</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MO">MO</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="NC">NC</option>
+            <option value="NE">NE</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NV">NV</option>
+            <option value="NY">NY</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WI">WI</option>
+            <option value="WV">WV</option>
+            <option value="WY">WY</option>
+        </select>
+
+        <label for="zip">ZIP code</label>
+        <input type="text" class="form-control" id="zip" pattern="^\d{5}$">
+
+    </fieldset>
+</form>
+
+<script src="contact.js"></script>
+
+</body>

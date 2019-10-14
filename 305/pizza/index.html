@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poppa's Pizza</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<body>
+<div class="container" id="main">
+
+    <div class="jumbotron">
+        <h1 class="display-4">Poppa's Pizza</h1>
+        <p class="lead">We make the world's best pizza!</p>
+        <hr class="my-4">
+        <p>Serving GRC students for over 2 decades.</p>
+    </div>
+
+    <img src="images/pizza_guy.png" alt="Pizza Guy" class="float-right">
+
+    <form action="confirmation.html" id="pizza_form">
+        <fieldset class="form-group">
+            <legend>Contact Info</legend>
+            <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" >
+                <span class="err" id="err-fname" class="err">
+                    Please enter a first name
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" >
+                <span class="err" id="err-lname">
+                Please enter a last name
+            </span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" rows="3" cols="20"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>Pickup or Delivery</legend>
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio" name="method"
+                       id="pickup" value="pickup"
+                       checked>
+                <label class="form-check-label" for="pickup">
+                    Pickup
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio" name="method"
+                       id="delivery" value="delivery">
+                <label class="form-check-label" for="delivery">
+                    Delivery
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>Select Toppings</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                       value="pepperoni" id="pepperoni" name="toppings[]">
+                <label class="form-check-label" for="pepperoni">
+                    Pepperoni
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                       value="spinach" id="spinach" name="toppings[]">
+                <label class="form-check-label" for="spinach">
+                    Spinach
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                       value="sausage" id="sausage" name="toppings[]">
+                <label class="form-check-label" for="sausage">
+                    Sausage
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>Pizza Size</legend>
+            <div class="form-group">
+                <select class="form-control" id="size">
+                    <option value="none">Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <span class="err" id="errSize">
+                Please enter a size
+            </span>
+        </fieldset>
+
+        <button id="submit" type="submit" class="btn btn-primary">
+            Submit your order
+        </button>
+
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts/pizza.js"></script>
+
+</body>
+</html>

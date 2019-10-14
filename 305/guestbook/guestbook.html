@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="guestbook.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>IT 305 Guestbook</h1>
+
+    <form action="confirmation.html">
+        <fieldset class="form-group">
+            <legend>Personal Info</legend>
+            <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" >
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" >
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" >
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" class="form-control" id="company" >
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn URL</label>
+                <input type="text" class="form-control" id="linkedin" >
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="text" class="form-control" id="email" >
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>Message</legend>
+            <textarea rows="4" cols="50" placeholder="Write a message to your classmates!"></textarea>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>Mailing List</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+                       value="add-me" id="add-me">
+                <label class="form-check-label" for="add-me">
+                    Add me to your mailing list!
+                </label>
+            </div>
+            <p>I prefer my emails in the following format:</p>
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio" name="format"
+                       id="html" value="html">
+                <label class="form-check-label" for="html">
+                    HTML
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio" name="format"
+                       id="text" value="text">
+                <label class="form-check-label" for="text">
+                    Text
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>How did we meet?</legend>
+            <div class="form-group">
+                <select class="form-control" id="meet">
+                    <option value="pholder">We met...</option>
+                    <option value="meetup">Meetup</option>
+                    <option value="job-fair">Job Fair</option>
+                    <option value="other">Other</option>
+                    <option value="havent">We haven't met yet</option>
+                </select>
+            </div>
+            <span id="otherSpan">
+                <label for="ifOther">If other, please specify</label>
+                <input type="text" class="form-control" id="ifOther" >
+            </span>
+        </fieldset>
+
+        <button id="submit" type="submit" class="btn btn-success">
+            Submit your message!
+        </button>
+
+    </form>
+</div>
+
+<script src="guestbook.js"></script>
+
+</body>
+</html>

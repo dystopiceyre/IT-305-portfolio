@@ -1,0 +1,23 @@
+body {
+    background-color: cornflowerblue;
+    padding: 15px;
+}
+
+fieldset {
+    border: black 2px solid;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+span {
+    display: none;
+}
