@@ -5,8 +5,8 @@ function validate() {
 
     //Clears error messages
     var errors = document.getElementsByClassName("err");
-    for (var i=0; i<errors.length; i++) {
-        errors[i].style.display = "block";
+    for (let i = 0; i < errors.length; i++) {
+        errors[i].style.display = "none";
     }
 
     //Check first name
@@ -35,9 +35,12 @@ function validate() {
     }
 
     //Validate email address
-    var addMe = document.getElementById("add-me").value;
-    if (addMe == "checked") {
-        mailingList();
+    var addMe = document.getElementById("add-me");
+    var list = addMe.value;
+    addMe.onclick = mailingList;
+    var emailType = document.getElementById("add-email");
+    if (list = "checked") {
+        emailType.style.visibility = "block";
     }
 
     //validate LinkedIn URL
