@@ -39,7 +39,7 @@ function validate() {
     var list = addMe.value;
     addMe.onclick = mailingList;
     var emailType = document.getElementById("add-email");
-    if (list = "checked") {
+    if (list == "checked") {
         emailType.style.visibility = "block";
     }
 
