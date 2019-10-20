@@ -3,12 +3,6 @@ document.getElementById("guestbook").onsubmit = validate;
 function validate() {
     var isValid = true;
 
-    //Clear all error messages
-    var errors = document.getElementsByClassName("err");
-    for (var i=0; i<errors.length; i++) {
-        errors[i].style.visibility = "hidden";
-    }
-
     //Check first name
     var first = document.getElementById("firstName").value;
     if (first == "") {
@@ -28,7 +22,7 @@ function validate() {
     // Check how we met
     document.getElementById("meet").onclick = ifOther;
     var howMet = document.getElementById("meet");
-    if (howMeet == "pholder") {
+    if (howMet == "pholder") {
         var errMeet = document.getElementById("err-meet");
         errMeet.style.display = "block";
         isValid =  false;
@@ -59,8 +53,8 @@ function ifOther() {
         otherSpan.style.display = "block";
     }
 
-    var ifOther = document.getElementById("if-other").value;
-    if (ifOther = "") {
+    var other = document.getElementById("if-other").value;
+    if (other == "") {
         var errSpecify = document.getElementById("err-specify");
         errSpecify.style.display = "block";
         return false;
