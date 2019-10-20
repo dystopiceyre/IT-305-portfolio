@@ -3,6 +3,12 @@ document.getElementById("guestbook").onsubmit = validate;
 function validate() {
     var isValid = true;
 
+    //Clears error messages
+    var errors = document.getElementsByClassName("err");
+    for (var i=0; i<errors.length; i++) {
+        errors[i].style.display = "block";
+    }
+
     //Check first name
     var first = document.getElementById("firstName").value;
     if (first == "") {
