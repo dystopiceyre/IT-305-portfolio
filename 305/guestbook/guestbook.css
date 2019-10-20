@@ -3,6 +3,11 @@ body {
     padding: 15px;
 }
 
+.err {
+    color: red;
+    font-weight: bold;
+}
+
 fieldset {
     border: black 2px solid;
     padding: 15px;
