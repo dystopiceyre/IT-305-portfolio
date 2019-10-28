@@ -6,6 +6,9 @@ const hearAboutUsOptions = document.getElementById("hearUs").childNodes;
 const otherAboutTextArea = document.getElementById("other-about-us");
 const interestOptions = document.getElementsByName("interests[]");
 const otherInterestsTextArea = document.getElementById("other-interests-text");
+const agreeToPolicySwitch = document.getElementById("switch1");
+const agreeToPolicyErr = document.getElementById("err-agree");
+const btnSubmit = document.getElementById("submit");
 
 for (let i = 0; i < requiredInputErrs.length; i++)
 {
@@ -14,6 +17,7 @@ for (let i = 0; i < requiredInputErrs.length; i++)
 shirtSizeErr.style.visibility = "hidden";
 otherAboutTextArea.style.display = "none";
 otherInterestsTextArea.style.display  = "none";
+btnSubmit.disabled = true;
 
 for (let i = 0; i < hearAboutUsOptions.length; i++)
 {
@@ -45,28 +49,47 @@ for (let i = 0; i < interestOptions.length; i++)
     });
 }
 
-function validate() {
+agreeToPolicySwitch.addEventListener("change", function() {
+    if(!agreeToPolicySwitch.checked) {
+        agreeToPolicyErr.style.display = "block";
+        btnSubmit.disabled = true;
+
+    } else {
+        agreeToPolicyErr.style.display = "none";
+        btnSubmit.disabled = false;
+    }
+});
+
+function validate()
+{
     let isValid = true;
 
     let requiredInputValues = document.getElementsByClassName("required-input");
 
-    for (let i = 0; i < requiredInputValues.length; i++) {
+    for (let i = 0; i < requiredInputValues.length; i++)
+    {
 
-        if (requiredInputValues[i].value === "") {
+        if (requiredInputValues[i].value === "")
+        {
             requiredInputValues[i].classList.add("border-danger");
             requiredInputErrs[i].style.visibility = "visible";
             isValid = false;
-        } else {
+        }
+        else
+        {
             requiredInputValues[i].classList.remove("border-danger");
             requiredInputErrs[i].style.visibility = "hidden";
         }
     }
 
-    if (shirtSize[shirtSize.selectedIndex].value === "none") {
+    if(shirtSize[shirtSize.selectedIndex].value === "none")
+    {
         shirtSizeErr.style.visibility = "visible";
         shirtSize.classList.add("border-danger");
         isValid = false;
-    } else {
+    }
+    else
+    {
         shirtSize.classList.remove("border-danger");
         shirtSizeErr.style.visibility = "hidden";
     }
