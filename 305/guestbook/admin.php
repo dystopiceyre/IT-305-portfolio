@@ -1,6 +1,11 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+session_start();
+include "errors.php";
+//if the user is not logged in, redirect
+if (!isset($_SESSION['username']) || $_SESSION['loggedin'] !== true) {
+    header("location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,12 +13,13 @@ error_reporting(E_ALL);
 <head>
     <meta charset="UTF-8">
     <title>Guestbook Summary</title>
-    <link rel="stylesheet" href="guestbook.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="guestbook.css">
 </head>
 <body>
 <div class="container">
+    <a href="logout.php" class="btn btn-danger">Sign Out</a>
 
     <h1>Guestbook Summary</h1>
     <h2><a href="guestbook.html">Guestbook</a></h2>
@@ -22,11 +28,12 @@ error_reporting(E_ALL);
     include "guestbookDBcnx.php";
     //Test connection
     if ($cnxn) {
-        echo "<p>Connected!</p>";
-    } else {
+    echo "<h2>Welcome, " .$_SESSION['username'] ."!</h2>";
+    }
+    else {
         echo mysqli_connect_error();
     }
-    //Define the query
+
     $sql = 'SELECT DISTINCT email FROM guestbook WHERE email != ""';
     $result = mysqli_query($cnxn, $sql);
 
@@ -44,7 +51,7 @@ error_reporting(E_ALL);
 
     $success = mail($to, $subject, $body, $headers);
     if ($success){
-        echo "successfully sent " .$count ." emails!";
+        echo "Successfully sent " .$count ." emails!";
     }
     else {
         echo mysqli_error($cnxn);
@@ -97,9 +104,6 @@ error_reporting(E_ALL);
         ?>
         </tbody>
     </table>
-
-
-
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

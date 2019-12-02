@@ -1,7 +1,5 @@
 <?php
-
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+include "errors.php";
 
 //Regex values to validate certain conventions and patterns for inputs in regards to name, text, linkedIn URL, and email
 $nameRegex = "/^([a-zA-Z' -]+)$/";

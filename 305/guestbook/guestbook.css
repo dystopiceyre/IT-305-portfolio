@@ -24,8 +24,9 @@ fieldset {
     padding: 15px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
+    font-family: Arial;
 }
 
 p {
@@ -36,6 +37,10 @@ p {
 
 span {
     display: none;
+}
+
+#submit {
+    background-color: darkcyan;
 }
 
 table, td, th, tr {
