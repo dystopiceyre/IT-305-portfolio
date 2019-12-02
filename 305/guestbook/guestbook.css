@@ -1,3 +1,14 @@
+a {
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
 body {
     background-color: cornflowerblue;
     padding: 15px;
@@ -25,4 +36,8 @@ p {
 
 span {
     display: none;
+}
+
+table, td, th, tr {
+    border: 1px black solid;
 }

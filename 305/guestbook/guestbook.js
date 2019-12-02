@@ -25,14 +25,28 @@ function validate() {
         isValid = false;
     }
 
+
     // Check how we met
-    document.getElementById("meet").onclick = ifOther;
-    var howMet = document.getElementById("meet");
-    if (howMet == "pholder") {
-        var errMeet = document.getElementById("err-meet");
-        errMeet.style.display = "block";
-        isValid =  false;
-    }
+    document.getElementById("meet").addEventListener("change", function () {
+        var howMet = document.getElementById("meet");
+        var metOptions = document.getElementsByClassName("options");
+        if (metOptions[howMet.selectedIndex].value == "pholder") {
+            var errMeet = document.getElementById("err-meet");
+            errMeet.style.display = "block";
+            isValid = false;
+        }
+
+        else if (metOptions[howMet.selectedIndex].valuet == "other") {
+            var otherSpan = document.getElementById("otherSpan");
+            otherSpan.style.display = "block";
+        }
+
+        var other = document.getElementById("if-other").value;
+        if (other == "") {
+            var errSpecify = document.getElementById("err-specify");
+            errSpecify.style.display = "block";
+        }
+    })
 
     //Validate email address
     var addMe = document.getElementById("add-me");
@@ -55,20 +69,6 @@ function validate() {
     return isValid;
 }
 
-function ifOther() {
-    var meet = document.getElementById("meet").value;
-    if (meet == "other") {
-        var otherSpan = document.getElementById("otherSpan");
-        otherSpan.style.display = "block";
-    }
-
-    var other = document.getElementById("if-other").value;
-    if (other == "") {
-        var errSpecify = document.getElementById("err-specify");
-        errSpecify.style.display = "block";
-        return false;
-    }
-}
 
 function mailingList() {
     var emailAddress = document.getElementById("email").value;
