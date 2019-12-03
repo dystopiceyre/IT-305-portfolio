@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Page</title>
+    <meta charset="UTF-8">
+    <title>Olivia Ringhiser</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+    <link href="portfolio/portfolio.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello World!</h1>
-</body>
+<div class="container">
+    <h1>{Olivia's Portfolio}</h1>
+    <img src="/305/portfolio/images/profile.png" alt="a headshot of Olivia">
 
+    <h2>{About Me}</h2>
+    <h4>Hi, y'all! I'm Olivia Ringhiser, a third-year software development student in Cohort 10 at Green River College in Auburn, WA.
+        I had previously received my Associate's Degree from the same school in 2016 through the Running Start Program, and spent three
+        semesters at Washington State University before returning to my roots.</h4>
+    <h4>This past summer, I got the chance to be a Software Engineering intern at CDK Global in Seattle. You can even catch a quick
+        glimpse of me in the recruiting <a href="https://www.youtube.com/watch?v=spDLlvQE8sE" target="_blank">video!</a>
+        My hope for this summer is to get an internship through Code 2040, a program in Silicon Valley that partners Black and Latinx
+        technologists with big-name companies in the area. You can check out my r&eacute;sum&eacute; <a href="resume/resume.html">here!</a></h4>
+    <h4>After getting my Bachelor's degree, I'd like to spend a few years in industry gaining experience before going back to school to
+        get a Master's Degree in Data Analytics. My dream job is to be a data scientist in the health care field, specializing either in cancer
+        research or women's health.</h4>
+    <h4>Outside of class you can usually find me curled up with a good book. I am the second of five children and spend a lot of time with my family.
+        I am a huge dog person; my family has owned five German Shepherds in the past two decades. I love musical theater, sci-fi movies, and travelling
+        (though my student's budget really limits that last one).
+    </h4>
+
+    <figure class="float-left">
+        <img src="/305/portfolio/images/kona.png" alt="a black and white Bernedoddle puppy, sitting with a stuffed dog-shaped toy">
+        <figcaption>My Bernedoodle puppy, Kona</figcaption>
+    </figure>
+    <figure class="float-right">
+        <img src="/305/portfolio/images/mira.png" alt="a full grown German Shepherd dog with a tennis ball sitting between her paws" id="mira">
+        <figcaption for="mira">My late German Shepherd, Mira</figcaption>
+    </figure>
+
+    <h3>Check out my LinkedIn page!</h3>
+    <a href="https://linkedin.com/in/oliviaringhiser" target="_blank"><img src="/305/portfolio/images/linkedin-logo.png" alt="the LinkedIn Logo" id="linkedin-logo"></a>
+
+    <h2>School Projects</h2>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="/305/portfolio/images/guestbook.png" alt="A screenshot of my guestbook">
+            <div class="card-body">
+                <h3 class="card-title">{Guestbook}</h3>
+                <p class="card-text">My IT 305 Guestbook. Please feel free to drop in your info!</p>
+                <a href="guestbook/guestbook.html" class="btn">Sign Up!</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="/305/portfolio/images/admin.png" alt="A screenshot of my admin page">
+            <div class="card-body">
+                <h3 class="card-title">{Admin Page}</h3>
+                <p class="card-text">Guestbook admin page<br>Username: admin<br>Password: @dm1n</p>
+                <a href="guestbook/admin.php" class="btn">Administrate</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="/305/portfolio/images/idaydream.png" alt="IDAYDream's logo, four children of
+            various ethnicities standing together on a cloud">
+            <div class="card-body">
+                <h3 class="card-title">{IDAYDream}</h3>
+                <p class="card-text">My team's homepage for Brandi Day's non-profit organization</p>
+                <a href="http://team-morr.greenriverdev.com/" class="btn">Volunteer</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="/305/portfolio/images/comic.png" alt="A picture of the comic supervillain Magneto
+        and his family of X-Men mutants">
+            <div class="card-body">
+                <h3 class="card-title">{Comic Book}</h3>
+                <p class="card-text">Part of my IT 207 Final Project, an interactive mini-comic.</p>
+                <a href="/207/final/magneto.html" class="btn">Read Me</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Olivia Ringhiser 2019</p>
+    </div>
+</footer>
+
+</body>
 </html>
