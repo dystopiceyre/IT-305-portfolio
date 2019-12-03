@@ -1,0 +1,93 @@
+a:hover {
+    color: #5f0635;
+}
+
+a:link {
+    color: #30323d;
+}
+
+a:visited {
+    color: #e5bc27;
+}
+
+body {
+    background-color: #6c209b;
+    margin: 3em;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    background-color: #4d5061;
+    color: #30323d;
+    width: fit-content;
+    border: solid 2px #30323d;
+    border-radius: 10px;
+}
+
+.card {
+    width: fit-content;
+    margin: 1em;
+    background-color: #5f0635;
+    border: 3px solid #e5bc27 !important;
+    border-radius: 25px !important;
+}
+
+.card-img-top {
+    border: 2px solid #30323d;
+    border-radius: 10px;
+}
+
+div {
+    padding: 10px;
+}
+
+figure {
+    display: inline-block;
+    padding: 10px 50px;;
+}
+
+figcaption {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #30323d;
+}
+
+.footer {
+    height: 35px;
+    width: 100%;
+    background-color: #4d5061;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0px;
+    left: -5px;
+    color: #30323d;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    border: 2px #e5bc27 dotted;
+}
+
+h1, h2 {
+    color: #e5bc27;
+    font-size: 4em;
+}
+
+h1, h2, h3 {
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+}
+
+h4, p, a {
+    font-family: 'Exo 2', sans-serif;
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: auto;
+    border-radius: 25px;
+}

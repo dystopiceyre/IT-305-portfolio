@@ -36,7 +36,7 @@ function validate() {
             isValid = false;
         }
 
-        else if (metOptions[howMet.selectedIndex].valuet == "other") {
+        else if (metOptions[howMet.selectedIndex].value == "other") {
             var otherSpan = document.getElementById("otherSpan");
             otherSpan.style.display = "block";
         }
@@ -50,10 +50,9 @@ function validate() {
 
     //Validate email address
     var addMe = document.getElementById("add-me");
-    var list = addMe.value;
     addMe.onclick = mailingList;
     var emailType = document.getElementById("add-email");
-    if (list == "checked") {
+    if (addMe.value == "checked") {
         emailType.style.visibility = "block";
     }
 

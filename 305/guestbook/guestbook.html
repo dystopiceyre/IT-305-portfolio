@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Guestbook</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="guestbook.css" rel="stylesheet">
@@ -19,21 +20,21 @@
             <div class="form-group">
                 <label for="firstName">First name</label>
                 <input type="text" class="form-control" id="firstName" name="firstName">
-                <span class="err" id="err-fname" name="err-fname">
+                <span class="err" id="err-fname">
                     Please enter a first name
                 </span>
             </div>
             <div class="form-group">
                 <label for="lastName">Last name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName">
-                <span class="err" id="err-lname" name="err-lname">
+                <span class="err" id="err-lname">
                     Please enter a last name
                 </span>
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="text" class="form-control" id="email" name="email" >
-                <span class="err" id="err-email" name="err-email">
+                <span class="err" id="err-email">
                     Please enter a valid email address
                 </span>
             </div>
@@ -48,7 +49,7 @@
             <div class="form-group">
                 <label for="linkedin">LinkedIn URL</label>
                 <input type="text" class="form-control" id="linkedin" name="linkedin">
-                <span class="err" id="err-linkedin" name="err-linkedin">
+                <span class="err" id="err-linkedin">
                     Please enter a valid LinkedIn URL (must begin with https://)
                 </span>
             </div>
@@ -68,24 +69,24 @@
                     Add me to your mailing list!
                 </label>
             </div>
-            <span id="add-email" name="add-email">
+            <span id="add-email">
                 I prefer my emails to be in the following format:
-                <div class="form-check">
+                <span class="form-check">
                     <input class="form-check-input"
                            type="radio" name="format"
-                           id="html" value="html" name="html">
+                           id="html" value="html">
                     <label class="form-check-label" for="html">
                         HTML
                     </label>
-                 </div>
-            <div class="form-check">
+                 </span>
+            <span class="form-check">
                 <input class="form-check-input"
                        type="radio" name="format"
-                       id="text" value="text" name="text">
+                       id="text" value="text">
                 <label class="form-check-label" for="text">
                     Text
                 </label>
-            </div>
+            </span>
                     </span>
         </fieldset>
 
@@ -100,14 +101,14 @@
                     <option class="options" value="havent">We haven't met yet</option>
                 </select>
             </div>
-            <span id="otherSpan" name="otherSpan">
+            <span id="otherSpan">
                 <label for="if-other">If other, please specify</label>
                 <input type="text" class="form-control" id="if-other" name="if-other">
-                <span class="err" id="err-specify" name="err-specify">
+                <span class="err" id="err-specify">
                     Please specify
                 </span>
             </span>
-            <span class="err" id="err-meet" name="err-meet">
+            <span class="err" id="err-meet">
                     Please say how we meet
                 </span>
         </fieldset>
@@ -119,6 +120,9 @@
 </div>
 
 <script src="guestbook.js"></script>
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <!-- Olivia Ringhiser
+    2/19/19
+    http://oringhiser.greenriverdev.com/207/final/magneto.html
+    Desrciption: 
+   -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Comic Strip</title>
+    <link href="305/bootstrap.min.css" rel="stylesheet">
+    <link href="final.css" rel="stylesheet">
+    <link href="magneto.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
+</head>
+
+    <body>
+    <h1>Magneto's recruiting</h1>
+    <div id="container">
+        <div id="personalInfo">
+            <label>Enter your name, mutant: </label><input type="text" id="name">
+            <label>Choose a power: </label><select name="power" id="power">
+                <option value="none">Power</option>
+                <option value="flight">Flight</option>
+                <option value="shape">Shape shifting</option>
+                <option value="path">Telepathy</option>
+                <option value="port">Teleportation</option>
+             </select>
+        </div>
+        
+        <div class="box">
+            <img src="anger.jpg" alt="Magneto, looking furious"/>
+            <p>They call me a villain, a monster, but that isn't the whole story. I have only done what I've needed
+            to do for the survival of mutantkind.</p>
+        </div>
+        
+        <div class="box">
+            <p>I tried to warn them.<br>
+            Save them even.</p>
+        </div>
+        
+        <div class="box">
+            <p>I had seen it all before... the hatred, the fear.</p>
+            <img src="registration.jpg" alt="propoganda for the Mutant Registration Act" />
+        </div>
+        
+        <div class="box">
+            <img src="nomore.jpg" alt="a text bubble that says 'No More Mutants'" />
+            <p class="large">I knew what they wanted.</p>
+        </div>
+        
+        <div class="box">
+            <img src="testament.jpg" alt="young Magneto amongst dozens of prisoners in Auschwitz" />
+            <p class="large">And I knew from experience that the worst of humanity would stop at nothing to achieve that goal.</p>
+        </div>
+        
+        <div class="box">
+            <img src="x.png" alt="Professor X sitting in a wheelchair" />
+            <p class="large">An old friend of mine tried to convice me there was a better way.<br>
+            A more unified way.</p>
+        </div>
+        
+        <div class="box">
+            <img src="xkids.png" alt="Scarlet Witch and Quicksilver as kids, making a drawing entitled 'Daddy'" />
+            <p>So I tried for a while. I even started a family. My joys: Wanda, Pietro, and Lorna.</p>
+        </div>
+        
+        <div class="box">
+            <img src="propoganda.jpg" alt="an anti-mutant propoganda poster" />
+            <p class="large">But the mutant-human relations got worse.<br> So<br>much<br>worse.</p>
+        </div>
+        
+        
+        <div class="box">
+            <img src="xm.jpg" alt="Magneto and Professor X facing opposite directions" />
+            <p class="large">Charles and I went our seperate ways. He became Professor X, and I, Magneto.</p>
+        </div>
+        
+        
+        <div class="box">
+            <img src="brotherhood.jpg" alt="a group of mutants surrounding Magneto, who is sitting on a throne" />
+            <p class="large">He built his team of loyal followers, the X-Men, and I built mine, the Brotherhood...</p>
+        </div>
+
+        <div class="box">
+            <img src="genosha.jpeg" alt="the mythical island of Genosha" />
+            <p>I founded the nation Genosha, where mutants could live in peace.</p>
+        </div>
+        
+        <div class="box">
+            <p>I naively thought we'd be safe there.<br>
+            I was wrong.</p>
+        </div>
+        
+        <div class="box">
+            <img src="sentinel.jpg" alt="a large robot" />
+            <p>A brilliant and cruel scientist created gianrt mutant hunting robots, the Sentinels.
+            They came, slaughtering us one by one.</p>
+        </div>
+        
+        <div class="box">
+            <p>I watched those who hated what I am destroy my family once before.<br>
+            Never again.<br>
+            I have too much to lose. My children, my grandchildren, my people.<br>
+            The battle has been long and hard.<br>
+            When you fight fire with fire, you both end up getting get burned.<br>
+            We've lost many good mutants, but I still believe we can win this.</p>
+        </div>
+        
+        <div class="box">
+            <img src="mfam.jpg" alt="Magneto, his children, and grandchildren" />
+            <p>I may have done things I am not proud of, but it was to protect those I love.</p>
+        </div>
+    
+        <div class="box" id="panel15">
+            <img src="lightning.jpg" alt="Magneto with lightning coming from his hands" />
+            <p id="powerhere" class="large">So will you join me on my crusade to save mutantkind? </p>
+        </div>
+        
+        <div class="box">
+            <input type="radio" name="join" value="yes">Yes, of course<br>
+            <input type="radio" name="join" value="no">No, you're a terrorist
+        </div>
+
+        <div class="box hidden" id="panel16">
+            <p>So be it, <span class="namehere"></span>.</p>
+        </div>
+        
+        <div class="box hidden" id="panel17">
+            <p>Welcome to the Brotherhood, <span class="namehere"></span>.</p>
+        </div>
+    </div>
+
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script src="magneto.js"></script>
+        
+    </body>
+</html>
